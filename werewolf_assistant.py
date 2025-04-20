@@ -113,7 +113,8 @@ if st.button('开始思考'):
                 continue
             joined = '\n'.join([e['text'] for e in info['texts']])
             prompt = (
-                f"请基于玩家{pid}的发言，给出其身份概率和一句话总结，返回JSON：\n"
+                f"你是{st.session_state.my_number}号玩家，你的身份是{st.session_state.my_role}\n"
+                f"请基于玩家{pid}和其他之前玩家的发言，给出其身份概率和一句话总结，返回JSON：\n"
                 f"{{\"role_probs\":{{\"狼人\":0-1,\"村民\":0-1,\"神职\":0-1}},\"summary\":\"一句话总结\"}}\n"
                 f"发言：\n{joined}"
             )
