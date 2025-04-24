@@ -153,7 +153,7 @@ if st.button('开始思考'):
             try:
                 resp = ds_client.chat.completions.create(
                     model='deepseek-chat',
-                    messages=[{'role': 'system', 'content': '你是专业狼人杀裁判。'},
+                    messages=[{'role': 'system', 'content': '你是专业狼人杀玩家。'},
                               {'role': 'user', 'content': prompt}],
                     temperature=0.3, max_tokens=300
                 )
